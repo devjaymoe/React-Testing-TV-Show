@@ -2,6 +2,7 @@ import React from 'react';
 import parse from 'html-react-parser';
 
 export default function Episodes(props) {
+  // console.log({props})
   return (
     <div className="episodes">
       {props.episodes.map(e => (
@@ -9,7 +10,9 @@ export default function Episodes(props) {
           {e.image && (
             <img className="episode-image" src={e.image.medium} alt={e.name} />
           )}
-          <div className="episode-info" data-testid='episode'>
+          <div 
+            className="episode-info" data-testid='episode'
+            >
             <p className="episode-number">
               Season {e.season}, Episode {e.number}
             </p>
